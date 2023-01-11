@@ -1,0 +1,56 @@
+:root {
+    --colorPpal: #624FBB;
+}
+
+body {
+    padding:0;
+    margin:0;
+    background: linear-gradient(#EBD7FF 0%, #F7ECFE 37%);
+    font-family: 'Figtree', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:#000;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 130px;
+    height: 30px;
+    background-image: url(img/Viyuyapp.png);
+    background-size: 100%;
+}
+
+.logo > span {
+    display: none;
+}
+
+.modeContainer > a > i {
+    color:#624FBB;
+    font-size: 1.5em;
+}
+
+.montosContainer {
+    width: 100%;
+    display: flex;
+
+}
+
+@media (max-width:768px) {
+    .logo {
+        width: 30px;
+        height: 35px;
+        background-position: bottom;
+        background-size: 400%;
+    }
+}

@@ -5,9 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viyuyapp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header class="topHeader">
+        <div class="logo"><span>Villullapp</span></div>
+        <div class="modeContainer">
+            <a href="#" id="mode">
+                <i class="bi bi-moon-stars-fill"></i>
+                <!-- <i class="bi bi-sun-fill"></i> -->
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="montosContainer">
+            <div class="montos ingresos">
+                <p>Ingresos</p>
+                <p><span class="signoPesos">$</span>49.311</p>
+            </div>
+            <div class="montos disponible">
+                <p>Disponible</p>
+                <p><span class="signoPesos">$</span>49.311</p>
+            </div>
+            <div class="montos gastos">
+                <p>Gastos</p>
+                <p><span class="signoPesos">$</span>49.311</p>
+            </div>
+        </div>
+        
+        <div class="ingresoDinero">
+            <label for="dineroDisponible">Ingresá tu dinero disponible</label>
+            <input type="number" id="dineroDisponible">
+        
+            <label for="gasto">Gasto</label>
+            <input type="number" id="gasto">
+
+            <label for="monto">Monto</label>
+            <input type="number" id="monto">
+        </div>
+        <div class="listaGastos">
+            <ul>
+                <li class="itemGastos">
+                    <p>Televisor</p>
+                    <p>2.708,92</p>
+                    <i class="i-trash"></i>
+                </li>
+                <li class="itemGastos">
+                    <p>Televisor</p>
+                    <p>2.708,92</p>
+                    <i class="i-trash"></i>
+                </li>
+                <li class="itemGastos">
+                    <p>Televisor</p>
+                    <p>2.708,92</p>
+                    <i class="i-trash"></i>
+                </li>
+                <li class="itemGastos">
+                    <p>Televisor</p>
+                    <p>2.708,92</p>
+                    <i class="i-trash"></i>
+                </li>
+                <li class="itemGastos">
+                    <p>Televisor</p>
+                    <p>2.708,92</p>
+                    <i class="i-trash"></i>
+                </li>
+            </ul>
+        </div>
+    </main>
+
     <script src="app.js"></script>
 </body>
 </html>
