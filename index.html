@@ -26,58 +26,65 @@
     </header>
     <main>
         <div class="montosContainer">
-            <div class="montos ingresos">
-                <p>Ingresos</p>
-                <p><span class="signoPesos">$</span>49.311</p>
+            <div class="ingresos">
+                <p class="montosDesc">Ingresos</p>
+                <p class="monto"><span class="signoPesos">$</span>49.311</p>
             </div>
             <div class="montos disponible">
-                <p>Disponible</p>
-                <p><span class="signoPesos">$</span>49.311</p>
+                <p class="montosDesc">Disponible</p>
+                <p class="monto"><span class="signoPesos">$</span>49.311</p>
             </div>
             <div class="montos gastos">
-                <p>Gastos</p>
-                <p><span class="signoPesos">$</span>49.311</p>
+                <p class="montosDesc">Gastos</p>
+                <p class="monto"><span class="signoPesos">$</span>49.311</p>
             </div>
         </div>
-        
-        <div class="ingresoDinero">
-            <label for="dineroDisponible">Ingresá tu dinero disponible</label>
-            <input type="number" id="dineroDisponible">
-        
-            <label for="gasto">Gasto</label>
-            <input type="number" id="gasto">
-
-            <label for="monto">Monto</label>
-            <input type="number" id="monto">
-        </div>
-        <div class="listaGastos">
-            <ul>
-                <li class="itemGastos">
-                    <p>Televisor</p>
-                    <p>2.708,92</p>
-                    <i class="i-trash"></i>
-                </li>
-                <li class="itemGastos">
-                    <p>Televisor</p>
-                    <p>2.708,92</p>
-                    <i class="i-trash"></i>
-                </li>
-                <li class="itemGastos">
-                    <p>Televisor</p>
-                    <p>2.708,92</p>
-                    <i class="i-trash"></i>
-                </li>
-                <li class="itemGastos">
-                    <p>Televisor</p>
-                    <p>2.708,92</p>
-                    <i class="i-trash"></i>
-                </li>
-                <li class="itemGastos">
-                    <p>Televisor</p>
-                    <p>2.708,92</p>
-                    <i class="i-trash"></i>
-                </li>
-            </ul>
+        <div class="containerIngresoLista">
+            <div class="ingresoDinero">
+                <div>
+                    <label for="dineroDisponible" class="desc">Ingresá tu dinero disponible</label>
+                    <input type="number" id="dineroDisponible" autofocus>
+                </div>
+                <div class="gastoYMonto">
+                    <div class="gastoCont">
+                        <label for="gasto">Gasto</label>
+                        <input type="text" id="gasto">
+                    </div>
+                    <div class="montoCont">
+                        <label for="monto">Monto</label>
+                        <input type="number" id="monto">
+                    </div>
+                </div>
+            </div>
+            <div class="listaGastos">
+                <ul>
+                    <li class="itemGastos">
+                        <p>Televisor</p>
+                        <p>2.708,92</p>
+                        <i class="bi bi-trash"></i>
+                    </li>
+                    <li class="itemGastos">
+                        <p>Televisor</p>
+                        <p>2.708,92</p>
+                        <i class="bi bi-trash"></i>
+                    </li>
+                    <li class="itemGastos">
+                        <p>Televisor</p>
+                        <p>2.708,92</p>
+                        <i class="bi bi-trash"></i>
+                    </li>
+                    <li class="itemGastos">
+                        <p>Televisor</p>
+                        <p>2.708,92</p>
+                        <i class="bi bi-trash"></i>
+                    </li>
+                    <li class="itemGastos">
+                        <p>Televisor</p>
+                        <p>2.708,92</p>
+                        <i class="bi bi-trash"></i>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
 

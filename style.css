@@ -1,5 +1,8 @@
 :root {
     --colorPpal: #624FBB;
+    --colorAlt: #6149DF;
+    --colorSec: #9B8AAB;
+    --gap:25px;
 }
 
 body {
@@ -7,11 +10,29 @@ body {
     margin:0;
     background: linear-gradient(#EBD7FF 0%, #F7ECFE 37%);
     font-family: 'Figtree', sans-serif;
+    height: 100vh;
 }
 
 a {
     text-decoration: none;
     color:#000;
+}
+
+input {
+    outline-width:0;
+    outline-color:transparent;
+}
+
+label {
+    cursor: text;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .topHeader {
@@ -20,7 +41,15 @@ a {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--gap);
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--gap);
     box-sizing: border-box;
 }
 
@@ -43,8 +72,129 @@ a {
 .montosContainer {
     width: 100%;
     display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.montosContainer p {
+    margin:0;
+}
+
+.monto {
+    color: var(--colorSec);
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.disponible .monto {
+    color: var(--colorPpal);
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.montosDesc {
+    font-weight: 300;
+    color: var(--colorSec);
+    text-align: center;
+    font-size: 1.5em;
 
 }
+
+.disponible .montosDesc {
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+.containerIngresoLista {
+    display: flex;
+    width: 100%;
+    margin-top:var(--gap);
+    gap: 50px;
+}
+.ingresoDinero {
+    display: flex;
+    flex-direction: column;
+}
+
+.ingresoDinero input {
+    height: 45px;
+    width: 100%;
+    border:none;
+    border-bottom: var(--colorAlt) solid 1px;
+    background-color:transparent;
+    box-sizing: border-box;
+}
+
+.ingresoDinero div:focus-within > label {
+    font-size:.9em;
+    bottom: 35px;
+}
+
+.ingresoDinero>div {
+    position: relative;
+}
+
+.ingresoDinero input:focus {
+    border-bottom: var(--colorAlt) solid 2px;
+}
+
+#dineroDisponible, #gasto, #monto {
+}
+
+.ingresoDinero, .listaGastos {
+    width: 50%;
+}
+
+.listaGastos {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: var(--gap);
+    box-sizing: border-box;
+}
+
+.listaGastos > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.itemGastos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    line-height: 3em;
+}
+
+.itemGastos>p:first-child{
+    margin-right: auto;
+}
+
+.itemGastos>p {
+    margin:0;
+}
+
+
+.ingresoDinero label {
+    color: var(--colorAlt);
+    font-size: 1.4em;
+    position: absolute;
+    bottom: 2px;
+    transition: .3s;
+}
+.gastoYMonto {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: var(--gap);
+}
+
+.gastoCont {
+    width: 65%;
+}
+
+.montoCont {
+    width: 30%;
+}
+
 
 @media (max-width:768px) {
     .logo {
