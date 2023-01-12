@@ -2,6 +2,7 @@
     --colorPpal: #624FBB;
     --colorAlt: #6149DF;
     --colorSec: #9B8AAB;
+    --colorTer: #CCB6E8;
     --gap:25px;
 }
 
@@ -33,6 +34,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+::selection {
+    background-color: var(--colorPpal);
+    color:#fff;
 }
 
 .topHeader {
@@ -108,12 +114,14 @@ main {
 .containerIngresoLista {
     display: flex;
     width: 100%;
-    margin-top:var(--gap);
+    margin-top:70px;
     gap: 50px;
+    justify-content: space-evenly;
 }
 .ingresoDinero {
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 .ingresoDinero input {
@@ -123,6 +131,10 @@ main {
     border-bottom: var(--colorAlt) solid 1px;
     background-color:transparent;
     box-sizing: border-box;
+    font-size: 1.5em;
+    padding-top: 17px;
+    color: var(--colorPpal);
+    font-weight: 700;
 }
 
 .ingresoDinero div:focus-within > label {
@@ -141,27 +153,51 @@ main {
 #dineroDisponible, #gasto, #monto {
 }
 
-.ingresoDinero, .listaGastos {
-    width: 50%;
-}
-
 .listaGastos {
     background-color: #fff;
     border-radius: 20px;
     padding: var(--gap);
     box-sizing: border-box;
+    width: 50%;
 }
 
 .listaGastos > ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;  
 }
 
 .itemGastos {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    line-height: 3em;
+    gap: 5%;
+    font-size: 1.4em;
+    align-items: center;
+}
+
+.gasto::before {
+    content: "$";
+    color: var(--colorTer);
+    padding-right: 3px;
+    font-size: ;
+}
+
+.borraGasto {
+    background-color: transparent;
+    border:none;
+    font-size: 1.3em;
+    color: var(--colorPpal);
+    transition:.3s;
+    cursor: pointer;
+}
+
+.borraGasto:hover {
+    transform: scale(1.25);
+
 }
 
 .itemGastos>p:first-child{
@@ -197,10 +233,57 @@ main {
 
 
 @media (max-width:768px) {
+
+    body{
+        height: auto;
+    }
+
     .logo {
         width: 30px;
         height: 35px;
         background-position: bottom;
         background-size: 400%;
+    }
+
+    .containerIngresoLista{
+        flex-direction: column;
+        width: 90%;
+        margin: 70px auto 25px auto;
+    }
+
+    .ingresoDinero{
+        width: 100%;
+    }
+
+    .ingresoDinero input {
+        margin: 0;
+        padding: 0;
+
+    }
+    
+    .listaGastos{
+        width: 100%;
+    }
+}
+
+@media (max-width:568px) {
+    .montosContainer {
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: space-evenly;
+    }
+
+    .montos.disponible {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ingresos {
+        order: 2;
+    }
+
+    .montos.gastos {
+        order: 3;
     }
 }
