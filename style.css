@@ -14,6 +14,32 @@ body {
     height: 100vh;
 }
 
+body::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(#190D22 0%, #101010 37%);
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+body.dark::before{
+    opacity: 1;
+}   
+
+.dark #modo>i {
+    color: var(--colorTer);
+}
+
+.dark .listaGastos {
+    background-color:#0a0a0a;
+    color:#fff;
+}
+
 a {
     text-decoration: none;
     color:#000;
@@ -70,7 +96,11 @@ main {
     display: none;
 }
 
-.modeContainer > a > i {
+#modo {
+    cursor:pointer;
+}
+
+#modo > i {
     color:#624FBB;
     font-size: 1.5em;
 }
@@ -90,6 +120,11 @@ main {
     color: var(--colorSec);
     font-weight: 600;
     font-size: 2em;
+}
+
+.signoPesos {
+    color: var(--colorTer);
+    padding-right: 3px;
 }
 
 .disponible .monto {
@@ -257,7 +292,6 @@ main {
 
     .ingresoDinero input {
         margin: 0;
-        padding: 0;
 
     }
     
@@ -285,5 +319,14 @@ main {
 
     .montos.gastos {
         order: 3;
+    }
+
+    .ingresoDinero>div {
+        position: relative;
+        font-size: 14px;
+    }
+
+    .listaGastos {
+        font-size: 12px;
     }
 }
