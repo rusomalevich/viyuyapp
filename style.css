@@ -4,6 +4,8 @@
     --colorSec: #9B8AAB;
     --colorTer: #CCB6E8;
     --gap:25px;
+    --hoverEscala:scale(1.25);
+    --transDefault:.3s;
 }
 
 body {
@@ -12,6 +14,7 @@ body {
     background: linear-gradient(#EBD7FF 0%, #F7ECFE 37%);
     font-family: 'Figtree', sans-serif;
     height: 100vh;
+    position: relative;
 }
 
 body::before {
@@ -23,7 +26,7 @@ body::before {
     left: 0;
     background: linear-gradient(#190D22 0%, #101010 37%);
     z-index: -1;
-    transition: opacity 0.3s linear;
+    transition: opacity var(--transDefault) linear;
     opacity: 0;
 }
 
@@ -100,6 +103,14 @@ main {
     cursor:pointer;
 }
 
+.modeContainer{
+        transition: var(--transDefault);
+}
+
+.modeContainer:hover{
+    transform: var(--hoverEscala);
+}
+
 #modo > i {
     color:#624FBB;
     font-size: 1.5em;
@@ -122,7 +133,7 @@ main {
     font-size: 2em;
 }
 
-.signoPesos {
+.monto::first-letter {
     color: var(--colorTer);
     padding-right: 3px;
 }
@@ -172,20 +183,36 @@ main {
     font-weight: 700;
 }
 
-.ingresoDinero div:focus-within > label {
+.ingresoDinero .sinFocus, .ingresoDinero div:focus-within > label {
     font-size:.9em;
     bottom: 35px;
 }
 
+
+
 .ingresoDinero>div {
     position: relative;
+    display: flex;
+    gap:10px;
 }
 
 .ingresoDinero input:focus {
     border-bottom: var(--colorAlt) solid 2px;
 }
 
-#dineroDisponible, #gasto, #monto {
+.ingresoDinero button {
+    background:transparent;
+    border:none;
+    font-size: 2em;
+    cursor: pointer;
+    color:var(--colorAlt);
+    transition: var(--transDefault);
+    opacity: .8;
+}
+
+.ingresoDinero button:hover {
+    transform: var(--hoverEscala);
+    opacity: 1;
 }
 
 .listaGastos {
@@ -226,13 +253,14 @@ main {
     border:none;
     font-size: 1.3em;
     color: var(--colorPpal);
-    transition:.3s;
+    transition:var(--transDefault);
     cursor: pointer;
+    opacity: .8;
 }
 
 .borraGasto:hover {
-    transform: scale(1.25);
-
+    transform: var(--hoverEscala);
+    opacity: 1;
 }
 
 .itemGastos>p:first-child{
@@ -249,7 +277,7 @@ main {
     font-size: 1.4em;
     position: absolute;
     bottom: 2px;
-    transition: .3s;
+    transition: var(--transDefault);
 }
 .gastoYMonto {
     display: flex;

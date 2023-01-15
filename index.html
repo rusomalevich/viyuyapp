@@ -16,7 +16,7 @@
 <body class="">
 
     <header class="topHeader">
-        <div class="logo"><span>Villullapp</span></div>
+        <div class="logo"><span>Viyuyapp</span></div>
         <div class="modeContainer">
             <buton id="modo">
                 <i class="bi bi-moon-stars-fill"></i>
@@ -28,32 +28,35 @@
         <div class="montosContainer">
             <div class="ingresos">
                 <p class="montosDesc">Ingresos</p>
-                <p id="ingreso" class="monto"><span class="signoPesos">$</span>00000</p>
+                <p id="ingreso" class="monto">$-----</p>
             </div>
             <div class="montos disponible">
                 <p class="montosDesc">Disponible</p>
-                <p id="disponible" class="monto"><span class="signoPesos">$</span>00000</p>
+                <p id="disponible" class="monto">$-----</p>
             </div>
             <div class="montos gastos">
                 <p class="montosDesc">Gastos</p>
-                <p id="gastos" class="monto"><span class="signoPesos">$</span>00000</p>
+                <p id="gastos" class="monto">$-----</p>
             </div>
         </div>
         <div class="containerIngresoLista">
             <div class="ingresoDinero">
                 <div>
-                    <label for="dineroDisponible" class="desc">Ingresá tu dinero disponible</label>
+                    <label for="dineroDisponible" id="labIngreso" class="desc" autofocus>¿Cuánta viyuya tenés?</label>
                     <input type="number" id="dineroDisponible" autofocus>
+                    <button id=ingresaDisponible><i class="bi bi-plus-circle-fill"></i></button>
                 </div>
                 <div class="gastoYMonto">
                     <div class="gastoCont">
-                        <label for="gasto">Gasto</label>
+                        <label for="gasto" id="labGasto">¿En qué gastaste?</label>
                         <input type="text" id="gasto">
+
                     </div>
                     <div class="montoCont">
-                        <label for="monto">Monto</label>
+                        <label for="monto" id="labMonto">¿Cuánto salió?</label>
                         <input type="number" id="monto">
                     </div>
+                    <button id="ingresaGasto"><i class="bi bi-plus-circle-fill"></i></button>
                 </div>
             </div>
             <div class="listaGastos">
