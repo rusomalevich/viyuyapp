@@ -6,6 +6,9 @@
     --gap:25px;
     --hoverEscala:scale(1.25);
     --transDefault:.3s;
+    --verde: #02AB54;
+    --rojo: #AB2522;
+    --darkRojo: #BD5451;
 }
 
 body {
@@ -138,10 +141,28 @@ main {
     padding-right: 3px;
 }
 
+.disponible {
+    text-align:center;
+}
+
 .disponible .monto {
     color: var(--colorPpal);
     font-weight: 700;
     font-size: 2.5em;
+}
+
+.disponible .monto.verde, .monto.verde::first-letter {
+    color: var(--verde);
+    opacity: 0.7;
+}
+
+.disponible .monto.rojo, .monto.rojo::first-letter {
+    color: var(--rojo);
+    opacity: 0.7;
+}
+.dark .disponible .monto.rojo, .dark .disponible .monto.rojo::first-letter {
+    color: var(--darkRojo);
+    opacity: 0.7;
 }
 
 .montosDesc {
@@ -357,4 +378,29 @@ main {
     .listaGastos {
         font-size: 12px;
     }
+}
+
+.txtError {
+    display: none;
+    color: var(--rojo);
+}
+
+.error {
+    animation: .5s ease 0s errorAnim forwards paused;
+}
+
+@keyframes errorAnim {
+    0% {
+        border-bottom: var(--colorAlt) solid 2px;
+    }
+    1%{
+        border-bottom: 2px solid #AB252200;
+    }
+    50% {
+        border-bottom: 4px solid var(--rojo);
+    }
+    100% {
+        border-bottom: 2px solid #AB252299;
+    }
+    
 }
