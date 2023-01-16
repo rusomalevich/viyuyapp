@@ -185,34 +185,32 @@ const ingresaGasto = () => {
         montosGuardados[2] += parseFloat(montoGasto.value)
         listaGastos[0][0] = nombreGasto.value
         listaGastos[0][1] = montoGasto.value
-        console.log(listaGastos[0][0])
-        console.log(listaGastos[0][1])
         nuevosSaldos()
     }
 }
 
-btnDark.addEventListener('click', toggleModo)
+btnDark.addEventListener('mousedown', toggleModo)
 
 //Al cliquear en el botón + se ingresa dinero o gasto
-btnIngresaDisponible.addEventListener('click', ingresaDinero)
-btnIngresaGasto.addEventListener('click', ingresaGasto)
+btnIngresaDisponible.addEventListener('mousedown', ingresaDinero)
+btnIngresaGasto.addEventListener('mousedown', ingresaGasto)
 
 //Hago que el ingreso de disponible y de gastos funcione con Enter
 inputIngresaDisponible.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
-        btnIngresaDisponible.click(); //uso click en vez de disparar la función directamente para que siga funcionando si cambio el nombre de la función
+        btnIngresaDisponible.mousedown(); //uso mousedown en vez de disparar la función directamente para que siga funcionando si cambio el nombre de la función
     }
 });
 
 montoGasto.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
-        btnIngresaGasto.click();
+        btnIngresaGasto.mousedown();
     }
 });
 
 nombreGasto.addEventListener('keypress', function (event){
     if (event.key === 'Enter') {
-        btnIngresaGasto.click()        
+        btnIngresaGasto.mousedown()        
     }
 })
 
